@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>occurance of substring in a string</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#b").click(function(){
+      
+      s1 = $("#p1").val();
+      s2=$("#p2").val();
+     var n = 0;
+        var pos = 0;
+        step=1;
+        while (true) {
+        pos = s1.indexOf(s2, pos);
+        if (pos >= 0) {
+            ++n;
+            pos += step;
+        } else break;
+    }
+    alert(n);
+    
+  });
+});
+
+</script>
+
+</head>
+<body>
+enter the string:<input type="text" id="p1" ><br><br>
+enter the substring:<input type="text" id="p2"><br><br>
+<button id="b">count the occurance</button>
+</body>
+</html>
